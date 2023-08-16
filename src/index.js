@@ -8,11 +8,14 @@ import Book from './book.js';
 const BookList = () => {
    
   return (
-    <section className="book-list">
-      {books.map((book) => {
-        return <Book {...book} key={book.id}  />;
-      })}
-    </section>
+    <>
+      <h1>Azmazon best sellers</h1>
+      <section className="book-list">
+        {books.map((book, index) => {
+          return <Book {...book} key={book.id} number={index}  />;
+        })}
+      </section>
+    </>
   );
 };
 
